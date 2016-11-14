@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" media="screen" />
+		<link rel="Bookmark" href="img/favicon.ico"/>
+		<meta charset="UTF-8">
+		<title>畅音阁</title>
+		<script type="text/javascript" src="js/login/jquery1.js"></script>
+    	<script type="text/javascript" src="js/login/login.js"></script>
+ 	    <script type="text/javascript" src="js/login/jquery-1.8.3.min.js"></script>
+ 	    <script type="text/javascript" src="js/comment/comment.js"></script>    
+ 	    
+		<link href="css/login.css" rel="stylesheet" type="text/css" />
+		<link href="css/lrtk.css" rel="stylesheet" type="text/css" />
+		<link href="css/UI.css" rel="stylesheet" type="text/css" />
+		<style type="text/css">
+		body{
+			background:white;
+			background-size:100% 100%;
+			margin: 0;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="homeLogin">
+			<abbr title="登录/注册">
+	  	<img src="img/IOS/user-male-circle-vector.png"  id="showLogin"></abbr>
+		</div>
+		
+			<!--
+ 	作者：1020170158@qq.com
+ 	时间：2016-07-18
+ 	描述：登录注册按钮
+--><div id="shadow"></div>
+
+	<div id="flesh" style="display:none;"><div id="aaa">
+	<h1>音乐你的生活<sup>HEAR YOUR VOICE</sup></h1>
+
+<div class="login" style="margin-top:50px;">
+    
+    <div class="header">
+        <div class="switch" id="switch">
+        	<a class="switch_btn_focus" id="switch_qlogin" href="javascript:void(0);" tabindex="7">快速登录</a>
+			<a class="switch_btn" id="switch_login" href="javascript:void(0);" tabindex="8">快速注册</a>
+			<div class="switch_bottom" id="switch_bottom" style="position: absolute; width: 64px; left: 0px;"></div>
+        </div>
+    </div>
+  
+    
+    <div class="web_qr_login" id="web_qr_login" style="display: block; height: 235px;">    
+
+            <!--登录-->
+            <div class="web_login" id="web_login">
+               
+               
+               <div class="login-box">
+    
+            
+		<div class="login_form">
+			<form action="what.php" name="loginform" accept-charset="utf-8" id="login_form" class="loginForm" method="post">
+			   <input type="hidden" name="did" value="0"/>
+               <input type="hidden" name="to" value="log"/>
+               <div class="uinArea" id="uinArea">
+                <label class="input-tips" for="u">帐号：</label>
+                <div class="inputOuter" id="uArea">
+                    
+                    <input type="text" id="u" name="username" class="inputstyle" placeholder="请输入您的账号"/>
+                </div>
+                </div>
+                <div class="pwdArea" id="pwdArea">
+               <label class="input-tips" for="p">密码：</label> 
+               <div class="inputOuter" id="pArea">
+                    
+                    <input type="password" id="p" name="p" class="inputstyle" placeholder="请输入您的密码"/>
+                </div>
+                </div>
+               
+                <div style="padding-left:50px;margin-top:20px;">
+                	<input type="submit" value="登 录" style="width:150px;" class="button_blue"/></div>
+              </form>
+           </div>
+           
+            	</div>
+               
+            </div>
+            <!--登录end-->
+  </div>
+
+  <!--注册-->
+    <div class="qlogin" id="qlogin" style="display: none; ">
+   
+    <div class="web_login">
+    	<form name="form2" id="regUser" accept-charset="utf-8"  action="http://www.baidu.com" method="post">
+	      <input type="hidden" name="to" value="reg"/>
+		      		       <input type="hidden" name="did" value="0"/>
+        <ul class="reg_form" id="reg-ul">
+        	<div id="userCue" class="cue"></div>
+            <li>
+                	
+                <label for="user"  class="input-tips2">用户名：</label>
+                <div class="inputOuter2">
+                    <input type="text" id="user" name="user" maxlength="16" class="inputstyle2" placeholder="请输入4位以上的字符"/>
+                </div>
+                    
+            </li>
+            
+              <li>
+                	
+                <label for="gender"  class="input-tips2">性别：</label>
+                <div class="inputOuter2">
+                    <p style="color: black;"><input type="radio" id="man" name="sex" class="sex" value="male" checked="checked"/>男</p>
+                    <p style="color: black;"><input type="radio" id="woman" name="sex" class="sex" value="female"/>女</p>
+                </div>
+                    
+            </li>
+                
+                <li>
+                	
+                <label for="gender"  class="input-tips2">年龄：</label>
+                <div class="inputOuter2">
+                    <input type="text" id="age" name="age" maxlength="2" class="inputstyle2" placeholder="请输入您的年龄"/>
+                </div>
+                    
+            </li>
+                
+            <li>
+            <label for="passwd" class="input-tips2">密码：</label>
+                <div class="inputOuter2">
+                    <input type="password" id="passwd"  name="passwd" maxlength="16" class="inputstyle2" placeholder="请输入6位以上的密码"/>
+                </div>
+                    
+            </li>
+            <li>
+            <label for="passwd2" class="input-tips2">确认密码：</label>
+                <div class="inputOuter2">
+                    <input type="password" id="passwd2" name="" maxlength="16" class="inputstyle2" placeholder="请再次输入您的密码"/>
+                </div>
+                    
+            </li>
+                
+               
+            <li>
+                <div class="inputArea">
+                    <input type="button" id="reg"  style="margin-top:10px;margin-left:85px;" class="button_blue" value="同意协议并注册"/> 
+                    <a href="#" class="zcxy" target="_blank">注册协议</a>
+                </div>
+                    
+            </li><div class="cl"></div>
+        </ul></form>
+           
+    
+    </div>
+   
+    
+    </div>
+    <!--注册end-->
+</div>
+<div class="jianyi">HEAR YOUR VOICE</div>
+	</div>
+</div>
+	
+		
+		<div id="headLine">
+			<a href="index.html">
+			<span><abbr title="畅音阁"><img src="img/UI/music_691px_1180880_easyicon.net.png" id="rotate">
+			</abbr></span></a>
+					<h1 id="h1">音乐你的生活<sup id="sup">HEAR YOUR VOICE</sup></h1>
+			</div>
+			
+			<!--
+            	作者：1020170158@qq.com
+            	时间：2016-07-28
+            	描述：排行榜
+            -->
+		<div class="secondLine">
+		<div class="content">
+			<ul class="song-list">
+			<h2>ROCK MUSIC</h2>
+			<li class="first">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">1</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="高级动物">高级动物</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="窦唯">窦唯</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_self" href="index.html" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_self" href="index.html" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_self" href="index.html" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			<li class="second">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">2</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="国际歌">国际歌</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="唐朝乐队">唐朝乐队</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_self" href="index.html" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_self" href="index.html" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_self" href="index.html" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			<li class="third">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">3</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="我真的需要">我真的需要</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="鲍家街43号">鲍家街43号</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_self" href="index.html" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_self" href="index.html" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_self" href="index.html" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			<li class="fourth">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">4</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="冷血动物">冷血动物</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="谢天笑">谢天笑</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_self" href="index.html" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_self" href="index.html" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_self" href="index.html" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			<li class="fifth">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">5</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="新长征路上的摇滚">新长征路上的摇滚</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="崔健">崔健</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_blank" href="index.html" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_blank" href="index.html" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_blank" href="index.html" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			</ul>
+		</div>
+		
+		<div class="content">
+			<ul class="song-list">
+			<h2>POP MUSIC</h2>
+			<li class="first">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">1</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="演员">演员</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="薛之谦">薛之谦</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_self" href="#" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_self" href="#" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_self" href="#" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			<li class="second">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">2</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="陆垚知马俐">陆垚知马俐</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="火星电台">火星电台</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_self" href="index.html" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_self" href="index.html" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_self" href="index.html" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			<li class="third">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">3</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="典狱司">典狱司</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="音频怪物">音频怪物</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_self" href="index.html" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_self" href="index.html" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_self" href="index.html" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			<li class="fourth">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">4</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="喜欢你">喜欢你</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="徐佳莹">徐佳莹</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_self" href="index.html" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_self" href="index.html" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_self" href="index.html" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			<li class="fifth">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">5</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="告白气球">告白气球</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="丁贇娟（阿布）">丁贇娟（阿布）</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_blank" href="index.html" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_blank" href="index.html" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_blank" href="index.html" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			</ul>
+		</div>
+		
+		<div class="content">
+			<ul class="song-list">
+			<h2>ELECTRONIC MUSIC</h2>
+			<li class="first">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">1</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="Fade">Fade</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="Alan Walker">Alan Walker</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_self" href="#" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_self" href="#" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_self" href="#" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			<li class="second">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">2</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="Sky (Radio Edit)">Sky (Radio Edit)</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="Steerner/Martell">Steerner/Martell</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_self" href="index.html" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_self" href="index.html" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_self" href="index.html" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			<li class="third">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">3</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="Five Hours">Five Hours</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="Deorro">Deorro</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_self" href="index.html" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_self" href="index.html" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_self" href="index.html" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			<li class="fourth">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">4</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="Sunburst">Sunburst</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="Tobu/Itro">Tobu/Itro</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_self" href="index.html" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_self" href="index.html" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_self" href="index.html" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			<li class="fifth">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">5</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="Bangarang (feat. Sirah)">Bangarang (feat. Sirah)</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="Skrillex">Skrillex</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_blank" href="index.html" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_blank" href="index.html" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_blank" href="index.html" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			</ul>
+		</div>
+		</div>
+		<div class="secondLine">
+		<div class="content">
+			<ul class="song-list">
+			<h2>ROCK MUSIC</h2>
+			<li class="first">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">1</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="高级动物">高级动物</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="窦唯">窦唯</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_self" href="index.html" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_self" href="index.html" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_self" href="index.html" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			<li class="second">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">2</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="国际歌">国际歌</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="唐朝乐队">唐朝乐队</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_self" href="index.html" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_self" href="index.html" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_self" href="index.html" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			<li class="third">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">3</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="我真的需要">我真的需要</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="鲍家街43号">鲍家街43号</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_self" href="index.html" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_self" href="index.html" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_self" href="index.html" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			<li class="fourth">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">4</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="冷血动物">冷血动物</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="谢天笑">谢天笑</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_self" href="index.html" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_self" href="index.html" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_self" href="index.html" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			<li class="fifth">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">5</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="新长征路上的摇滚">新长征路上的摇滚</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="崔健">崔健</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_blank" href="index.html" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_blank" href="index.html" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_blank" href="index.html" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			</ul>
+		</div>
+		
+		<div class="content">
+			<ul class="song-list">
+			<h2>POP MUSIC</h2>
+			<li class="first">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">1</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="演员">演员</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="薛之谦">薛之谦</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_self" href="#" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_self" href="#" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_self" href="#" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			<li class="second">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">2</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="陆垚知马俐">陆垚知马俐</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="火星电台">火星电台</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_self" href="index.html" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_self" href="index.html" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_self" href="index.html" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			<li class="third">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">3</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="典狱司">典狱司</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="音频怪物">音频怪物</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_self" href="index.html" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_self" href="index.html" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_self" href="index.html" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			<li class="fourth">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">4</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="喜欢你">喜欢你</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="徐佳莹">徐佳莹</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_self" href="index.html" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_self" href="index.html" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_self" href="index.html" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			<li class="fifth">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">5</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="告白气球">告白气球</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="丁贇娟（阿布）">丁贇娟（阿布）</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_blank" href="index.html" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_blank" href="index.html" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_blank" href="index.html" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			</ul>
+		</div>
+		
+		<div class="content">
+			<ul class="song-list">
+			<h2>ELECTRONIC MUSIC</h2>
+			<li class="first">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">1</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="Fade">Fade</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="Alan Walker">Alan Walker</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_self" href="#" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_self" href="#" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_self" href="#" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			<li class="second">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">2</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="Sky (Radio Edit)">Sky (Radio Edit)</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="Steerner/Martell">Steerner/Martell</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_self" href="index.html" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_self" href="index.html" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_self" href="index.html" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			<li class="third">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">3</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="Five Hours">Five Hours</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="Deorro">Deorro</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_self" href="index.html" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_self" href="index.html" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_self" href="index.html" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			<li class="fourth">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">4</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="Sunburst">Sunburst</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="Tobu/Itro">Tobu/Itro</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_self" href="index.html" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_self" href="index.html" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_self" href="index.html" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			<li class="fifth">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">5</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="Bangarang (feat. Sirah)">Bangarang (feat. Sirah)</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="Skrillex">Skrillex</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_blank" href="index.html" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_blank" href="index.html" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_blank" href="index.html" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			</ul>
+		</div>
+		</div>
+		<div class="secondLine">
+		<div class="content">
+			<ul class="song-list">
+			<h2>ROCK MUSIC</h2>
+			<li class="first">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">1</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="高级动物">高级动物</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="窦唯">窦唯</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_self" href="index.html" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_self" href="index.html" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_self" href="index.html" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			<li class="second">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">2</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="国际歌">国际歌</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="唐朝乐队">唐朝乐队</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_self" href="index.html" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_self" href="index.html" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_self" href="index.html" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			<li class="third">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">3</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="我真的需要">我真的需要</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="鲍家街43号">鲍家街43号</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_self" href="index.html" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_self" href="index.html" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_self" href="index.html" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			<li class="fourth">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">4</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="冷血动物">冷血动物</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="谢天笑">谢天笑</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_self" href="index.html" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_self" href="index.html" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_self" href="index.html" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			<li class="fifth">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">5</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="新长征路上的摇滚">新长征路上的摇滚</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="崔健">崔健</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_blank" href="index.html" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_blank" href="index.html" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_blank" href="index.html" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			</ul>
+		</div>
+		
+		<div class="content">
+			<ul class="song-list">
+			<h2>POP MUSIC</h2>
+			<li class="first">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">1</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="演员">演员</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="薛之谦">薛之谦</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_self" href="#" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_self" href="#" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_self" href="#" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			<li class="second">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">2</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="陆垚知马俐">陆垚知马俐</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="火星电台">火星电台</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_self" href="index.html" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_self" href="index.html" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_self" href="index.html" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			<li class="third">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">3</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="典狱司">典狱司</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="音频怪物">音频怪物</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_self" href="index.html" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_self" href="index.html" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_self" href="index.html" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			<li class="fourth">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">4</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="喜欢你">喜欢你</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="徐佳莹">徐佳莹</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_self" href="index.html" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_self" href="index.html" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_self" href="index.html" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			<li class="fifth">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">5</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="告白气球">告白气球</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="丁贇娟（阿布）">丁贇娟（阿布）</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_blank" href="index.html" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_blank" href="index.html" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_blank" href="index.html" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			</ul>
+		</div>
+		
+		<div class="content">
+			<ul class="song-list">
+			<h2>ELECTRONIC MUSIC</h2>
+			<li class="first">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">1</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="Fade">Fade</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="Alan Walker">Alan Walker</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_self" href="#" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_self" href="#" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_self" href="#" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			<li class="second">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">2</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="Sky (Radio Edit)">Sky (Radio Edit)</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="Steerner/Martell">Steerner/Martell</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_self" href="index.html" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_self" href="index.html" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_self" href="index.html" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			<li class="third">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">3</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="Five Hours">Five Hours</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="Deorro">Deorro</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_self" href="index.html" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_self" href="index.html" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_self" href="index.html" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			<li class="fourth">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">4</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="Sunburst">Sunburst</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="Tobu/Itro">Tobu/Itro</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_self" href="index.html" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_self" href="index.html" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_self" href="index.html" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			<li class="fifth">
+				<div class="list">
+				<div class="text-left">
+				<span class="num">5</span>
+				<span class="song-name"><a target="_self" href="#" class="song" title="Bangarang (feat. Sirah)">Bangarang (feat. Sirah)</a></span>
+				<span class="singer-name" style="font-size:20px;"><a target="_self" href="#" class="singer" title="Skrillex">Skrillex</a></span></div>
+				<div class="icon-right">
+				<span class="play-icon"><a target="_blank" href="index.html" class="liner"><abbr title="播放"><img src="img/IOS-style/Play_Music_512px_1178409_easyicon.net.png" class="button"/></abbr><i></i></a></span>
+				<span class="collect-name"><a target="_blank" href="index.html" class="liner"><abbr title="收藏"><img src="img/IOS/star-vector.png" class="button"/></abbr><i></i></a></span>
+				<span class="download-icon"><a target="_blank" href="index.html" class="liner"><abbr title="下载"><img src="img/IOS/download-cloud-vector.png" class="button"/></abbr><i></i></a></span></div>
+			</div></li>
+			</ul>
+		</div>
+		</div>
+		
+		
+	<div class="case-item">
+		<div class="ih-item circle effect1">
+			<a class="a">
+				<div class="spinner"></div>
+				<div class="img"><img src="img/UI/music_691px_1180880_easyicon.net.png" alt="乐音阁"></div>
+				<div class="info">
+					<div class="info-back">
+						<h3>飙升榜</h3>
+						<p>点击查看</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	<div class="case-item">
+		<div class="ih-item circle effect1">
+			<a class="a">
+				<div class="spinner"></div>
+				<div class="img"><img src="img/UI/music_691px_1180880_easyicon.net.png" alt="乐音阁"></div>
+				<div class="info">
+					<div class="info-back">
+						<h3>新歌榜</h3>
+						<p>点击查看</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	<div class="case-item">
+		<div class="ih-item circle effect1">
+			<a class="a">
+				<div class="spinner"></div>
+				<div class="img"><img src="img/UI/music_691px_1180880_easyicon.net.png" alt="乐音阁"></div>
+				<div class="info">
+					<div class="info-back">
+						<h3>原创榜</h3>
+						<p>点击查看</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+		
+<!--
+	作者：1020170158@qq.com
+	时间：2016-07-28
+	描述：JS区
+-->
+		<script type="text/javascript">
+			$(function(){
+				$('.a').toggle(
+				function(){
+					var ind=$('.a').index(this);
+					$('.secondLine').eq(ind).siblings('.secondLine').css('display','none');
+					$('.secondLine').eq(ind).slideDown('slow');
+				},
+				function(){
+					var ind=$('.a').index(this);
+					$('.secondLine').eq(ind).siblings('.secondLine').css('display','none');
+					$('.secondLine').eq(ind).slideUp('slow');
+				}
+			);
+			})
+		</script>
+		<script type="text/javascript">
+    	$(function(){
+    		$("#showLogin").toggle(
+    			function(){
+    				$("#flesh").css('display','block');
+    				$("#shadow").css('display','block');
+    			},
+    			function(){
+    				$("#flesh").css('display','none');
+    				$("#shadow").css('display','none');
+    			}
+    		);
+    		$("#shadow").click(
+    		function(){
+    				$("#flesh").css('display','none');
+    				$("#shadow").css('display','none');
+    		}
+    		);
+    	})
+    </script>
+    <script>
+    (function(){
+	var element = document.getElementById("rotate");
+	var r = 0;
+	var i = 1;
+
+    function rotate(){
+	r += i;
+	
+	element.style.MozTransform = "rotate(" + r + "deg)";
+	element.style.webkitTransform ="rotate(" + r + "deg)";
+	element.style.msTransform = "rotate(" + r + "deg)";
+	element.style.OTransform = "rotate(" + r + "deg)";
+	element.style.transform = "rotate(" + r + "deg)";
+}
+
+var timer = setInterval(rotate,10);
+
+element.onmouseover = function(){
+	clearInterval(timer);
+	timer = null;
+};
+
+element.onmouseout = function(){
+	if(timer)return;
+	timer = setInterval(rotate,10);
+};
+}());
+</script>
+
+    </br>
+	<footer id="footer">
+		<div>Copyright ©2016 <a href="http://english.scuec.edu.cn/">SCUEC</a> All Rights Reserved.</div>	
+	</footer>
+	</body>
+</html>
+

@@ -1,0 +1,874 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" media="screen" /><!--浏览器小图标-->
+		<link rel="Bookmark" href="img/favicon.ico"/><!--收藏夹显示图标-->
+		
+		<!--Windows所需链接，还有一个按钮的链接要放在方法后面-->
+		<link rel="stylesheet" type="text/css" href="css/Windows/SyntaxHighlighter.css"/>
+        <script type="text/javascript" src="js/Windows/jquery.js"></script>
+        <script type="text/javascript" src="js/Windows/styletable.jquery.plugin.js"></script>
+		
+		<!--Windows链接完毕-->
+		
+		
+		
+	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   		<title>乐音阁</title>
+    
+    	<script type="text/javascript" src="js/login/jquery1.js"></script>
+    	<script type="text/javascript" src="js/login/login.js"></script>
+ 	    <script type="text/javascript" src="js/login/jquery-1.8.3.min.js"></script>
+ 	    <script type="text/javascript" src="js/comment/comment.js" ></script>
+    		
+    	<link href="css/search.css" rel="stylesheet" type="text/css" />
+   		<link href="css/login.css" rel="stylesheet" type="text/css" />
+   		<link rel="stylesheet" href="css/stylesheets/style.css"/>
+   		<link rel="stylesheet" type="text/css" href="css/comment.css"/>
+    	<style type="text/css">
+    body{
+	background: url(img/background.png) no-repeat;
+	background-size:100%;
+	background-attachment: fixed;
+	  }
+    	</style>
+
+</head>
+
+<body>
+	<!--
+ 	作者：1020170158@qq.com
+ 	时间：2016-07-18
+ 	描述：登录注册按钮
+--><div id="shadow"></div>
+
+	<div id="flesh" style="display:none;"><div id="aaa">
+	<h1>音乐你的生活<sup>HEAR YOUR VOICE</sup></h1>
+
+<div class="login" style="margin-top:50px;">
+    
+    <div class="header">
+        <div class="switch" id="switch">
+        	<a class="switch_btn_focus" id="switch_qlogin" href="javascript:void(0);" tabindex="7">快速登录</a>
+			<a class="switch_btn" id="switch_login" href="javascript:void(0);" tabindex="8">快速注册</a>
+			<div class="switch_bottom" id="switch_bottom" style="position: absolute; width: 64px; left: 0px;"></div>
+        </div>
+    </div>    
+  
+    
+    <div class="web_qr_login" id="web_qr_login" style="display: block; height: 235px;">    
+
+            <!--登录-->
+            <div class="web_login" id="web_login">
+               
+               
+               <div class="login-box">
+    
+            
+		<div class="login_form">
+			<form action="what.php" name="loginform" accept-charset="utf-8" id="login_form" class="loginForm" method="post">
+			   <input type="hidden" name="did" value="0"/>
+               <input type="hidden" name="to" value="log"/>
+               <div class="uinArea" id="uinArea">
+                <label class="input-tips" for="u">帐号：</label>
+                <div class="inputOuter" id="uArea">
+                    
+                    <input type="text" id="u" name="username" class="inputstyle" placeholder="请输入您的账号"/>
+                </div>
+                </div>
+                <div class="pwdArea" id="pwdArea">
+               <label class="input-tips" for="p">密码：</label> 
+               <div class="inputOuter" id="pArea">
+                    
+                    <input type="password" id="p" name="p" class="inputstyle" placeholder="请输入您的密码"/>
+                </div>
+                </div>
+               
+                <div style="padding-left:50px;margin-top:20px;">
+                	<input type="submit" value="登 录" style="width:150px;" class="button_blue"/></div>
+              </form>
+           </div>
+           
+            	</div>
+               
+            </div>
+            <!--登录end-->
+  </div>
+
+  <!--注册-->
+    <div class="qlogin" id="qlogin" style="display: none; ">
+   
+    <div class="web_login">
+    	<form name="form2" id="regUser" accept-charset="utf-8"  action="what.php" method="post">
+	      <input type="hidden" name="to" value="reg"/>
+		      		       <input type="hidden" name="did" value="0"/>
+        <ul class="reg_form" id="reg-ul">
+        	<div id="userCue" class="cue"></div>
+            <li>
+                	
+                <label for="user"  class="input-tips2">用户名：</label>
+                <div class="inputOuter2">
+                    <input type="text" id="user" name="user" maxlength="16" class="inputstyle2" placeholder="请输入4位以上的字符"/>
+                </div>
+                    
+            </li>
+            
+             <li>
+                	
+                <label for="gender"  class="input-tips2">性别：</label>
+                <div class="inputOuter2">
+                    <p style="color: black;"><input type="radio" id="man" name="sex" class="sex" value="male" checked="checked"/>男</p>
+                    <p style="color: black;"><input type="radio" id="woman" name="sex" class="sex" value="female"/>女</p>
+                </div>
+                    
+            </li>
+                
+                <li>
+                	
+                <label for="gender"  class="input-tips2">年龄：</label>
+                <div class="inputOuter2">
+                    <input type="text" id="age" name="age" maxlength="2" class="inputstyle2" placeholder="请输入您的年龄"/>
+                </div>
+                    
+            </li>
+            
+            <li>
+            <label for="passwd" class="input-tips2">密码：</label>
+                <div class="inputOuter2">
+                    <input type="password" id="passwd"  name="passwd" maxlength="16" class="inputstyle2" placeholder="请输入6位以上的密码"/>
+                </div>
+                    
+            </li>
+            <li>
+            <label for="passwd2" class="input-tips2">确认密码：</label>
+                <div class="inputOuter2">
+                    <input type="password" id="passwd2" name="" maxlength="16" class="inputstyle2" placeholder="请再次输入您的密码"/>
+                </div>
+                    
+            </li>
+                
+               
+            <li>
+                <div class="inputArea">
+                    <input type="button" id="reg"  style="margin-top:10px;margin-left:85px;" class="button_blue" value="同意协议并注册"/> 
+                    <a href="#" class="zcxy" target="_blank">注册协议</a>
+                </div>
+                    
+            </li><div class="cl"></div>
+        </ul></form>
+           
+    
+    </div>
+   
+    
+    </div>
+    <!--注册end-->
+</div>
+<div class="jianyi">HEAR YOUR VOICE</div>
+	</div>
+</div>
+	
+	<!--
+    	作者：1020170158@qq.com
+    	时间：2016-07-18
+    	描述：播放页顶部按钮
+  -->
+  <div id="home">
+  	<abbr title="首页"><a href="home.html" target="_self">
+  	<img src="img/IOS-style/home-vector.png" width="22" height="22"
+  		 style="position:absolute; left:25px; top:25px; "></abbr></a>
+  </div>
+    <div id="collect">
+  	<abbr title="我的收藏"><a href="#" class="od" onclick = "show('fd');return false;">
+  	<img src="img/IOS-style/star-vector.png" width="25" height="25"
+  		 style="position:absolute; left:70px; top:25px; "></a></abbr>
+  </div>
+    <div id="download">
+  	<abbr title="我的下载"><a href="#" class="od" onclick = "show('fd');return false;">
+  	<img src="img/IOS-style/download-cloud-vector.png" width="25" height="25"
+  		 style="position:absolute; left:120px; top:25px; "></abbr></a>
+  </div>
+    <div id="history">
+  	<abbr title="历史评论"><a href="mycomment.html" target="_blank">
+  	<img src="img/IOS-style/shared-vector.png"25" height="25"
+  		 style="position:absolute; left:170px; top:25px; "></abbr></a>
+  </div>
+    <div id="login">
+	  	<abbr title="登录/注册">
+	  	<img src="img/IOS-style/user-male-circle-vector.png" width="25" height="25"
+	  		 style="position:absolute; right:25px; top:25px;" id="showLogin"></abbr></a>
+  	</div>
+ 
+
+<div id="search">	
+   <!-- 搜索框  -->
+<form method="post" action="what.php" accept-charset="utf-8" id="search-form">
+    <label for="searchBtn">
+    	<abbr title="搜索">
+    	<input type="image" name="submit" src="img/IOS-style/search-vector.png" width="25" height="25"
+     style="position: absolute; right: 60px; top: 25px; onClick="document.formName.submit()""</a></abbr>
+  <input type="text" id="searchBtn" placeholder="搜索歌曲/歌手"
+  	style="position: absolute; right: 90px; top:28px">
+  </label>
+</form>
+<div class="suggest" id="ss" style="display: none">
+	<ul id="sr">
+		<li>111</li>
+		<li>222</li>
+		<li>333</li>
+		<li>444</li>
+		<li>555</li>
+		<li>666</li>  
+	</ul>	
+</div>
+ <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script>
+	$('#searchBtn').bind('keyup',function(){
+		var searchText=$('#searchBtn').val();
+		//get中网页从服务器获得
+		$.get('http://api.bing.com/qsonhs.aspx?q'+searchText,function(d){
+			var d = d.AS.Results[0].Suggests;
+			var html='';
+			for(var i=0;i<d.length;i++){
+				html+='<li>'+d[i].Txt+'</li>';
+			}
+			
+			$('#sr').html(html);
+			$('#ss').show().css({
+			top:$('#searchBtn').offset().top+$('#searchBtn').height(),
+			left:$('#searchBtn').offset().left,
+			position:'absolute';
+		});
+		},'json');
+		
+	
+		
+	})
+</script>
+
+    <!-- 播放器 -->
+<div class="player">
+    	<div id="player">
+		<div class="cover"></div>
+		<div class="ctrl">
+			<div class="tag">
+				<strong>Title</strong>
+				<span class="artist">Artist</span>
+				<span class="album">Album</span>
+			</div>
+			<div class="control">
+				<div class="left">
+					<div class="rewind icon"></div>
+					<div class="playback icon"></div>
+					<div class="fastforward icon"></div>
+				</div>
+				<div class="volume right">
+					<div class="mute icon left"></div>
+					<div class="slider left">
+						<div class="pace"></div>
+					</div>
+				</div>
+			</div>
+			<div class="progress">
+				<div class="slider">
+					<div class="loaded"></div>
+					<div class="pace"></div>
+				</div>
+				<div class="timer left">0:00</div>
+				<div class="right">
+					<div class="repeat icon"></div>
+					<div class="shuffle icon"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<ul id="playlist"></ul>
+</div>
+
+
+<!--
+	作者：1020170158@qq.com
+	时间：2016-07-26
+	描述：歌词显示
+-->
+ <div id="lyricBox">
+		<marquee style="font-size:15px; width: 300px; 
+			color: white; line-height: 25px; height: 250px"
+			 scrollAmount=1 scrollDelay=1 direction="up" height=250>
+作曲 : Coldplay
+作词 : Coldplay
+I used to rule the world
+大千世界曾由我主宰
+Seas would rise when I gave the word
+巨浪也曾因我之命澎湃
+Now in the morning I sleep alone
+而今我却在黎明独自入眠
+Sweep the streets I used to own
+在曾属于我的大道落寞徘徊
+I used to roll the dice
+大千世界曾由我主宰
+Feel the fear in my enemy's eyes
+尽情品味惊恐在死敌瞳孔绽开
+Listen as the crowd would sing:
+欣然倾听百姓高歌喝彩
+"Now the old king is dead! Long live the king!"
+“先王亡矣!”“新王万代!”
+One minute I held the key
+此刻我手握权位经脉
+Next the walls were closed on me
+转瞬才知宫墙深似海
+And I discovered that my castles stand
+恍然发现我的城池
+Upon pillars of salt, pillars of sand
+基底散如盐沙乱似尘埃
+I hear Jerusalem bells a-ringing
+听那耶路撒冷钟声传来
+Roman Cavalry choirs are singing
+罗马骑兵歌声震彻山海
+Be my mirror my sword and shield
+担当我的明镜，利剑和盾牌
+My missionaries in a foreign field
+我的传教士屹立边疆之外
+For some reason I can not explain
+只因一些缘由我无法释怀
+Once you go there was never, never an honest word
+一旦你离开这里便不再,不再有逆耳忠言存在
+That was when I ruled the world
+而这便是我统治的时代
+It was the wicked and wild wind
+凛冽邪风呼啸袭来
+Blew down the doors to let me in.
+吹散重门使我深陷阴霾
+Shattered windows and the sound of drums
+断壁残垣礼崩乐坏
+People could not believe what I'd become
+世人不敢相信我已当年不再
+Revolutionaries Wait
+起义大军翘首期待
+For my head on a silver plate
+有朝一日我站上断头台
+Just a puppet on a lonely string
+恰如傀儡随吊线寂寞摇摆
+Oh who would ever want to be king?
+悲哉，谁又曾渴望万人膜拜?
+I hear Jerusalem bells a-ringing
+听那耶路撒冷钟声传来
+Roman Cavalry choirs are singing
+罗马骑兵歌声震彻山海
+Be my mirror my sword and shield
+担当我的明镜，利剑和盾牌
+My missionaries in a foreign field
+我的传教士屹立边疆之外
+For some reason I can not explain
+只因一些缘由我无法释怀
+I know Saint Peter won't call my name
+我亦知天堂之门不会为我敞开
+Never an honest word
+不再有逆耳忠言存在
+But that was when I ruled the world
+而这便是我统治的时代
+(Ohhhhh Ohhh Ohhh)
+(哦哦哦)
+Hear Jerusalem bells a-ringing
+听那耶路撒冷钟声传来
+Roman Cavalry choirs are singing
+罗马骑兵歌声震彻山海
+Be my mirror my sword and shield
+担当我的明镜，利剑和盾牌
+My missionaries in a foreign field
+我的传教士屹立边疆之外
+For some reason I can not explain
+只因一些缘由我无法释怀
+I know Saint Peter won't call my name
+我亦知天堂之门不会为我敞开
+Never an honest word
+不再有逆耳忠言存在
+But that was when I ruled the world
+而这便是我统治的时代
+<BR></marquee>
+</div>
+<!--
+<textarea id="lyricBox" disabled="disabled">
+ 作曲 : Coldplay
+作词 : Coldplay
+I used to rule the world
+大千世界曾由我主宰
+Seas would rise when I gave the word
+巨浪也曾因我之命澎湃
+Now in the morning I sleep alone
+而今我却在黎明独自入眠
+Sweep the streets I used to own
+在曾属于我的大道落寞徘徊
+I used to roll the dice
+大千世界曾由我主宰
+Feel the fear in my enemy's eyes
+尽情品味惊恐在死敌瞳孔绽开
+Listen as the crowd would sing:
+欣然倾听百姓高歌喝彩
+"Now the old king is dead! Long live the king!"
+“先王亡矣!”“新王万代!”
+One minute I held the key
+此刻我手握权位经脉
+Next the walls were closed on me
+转瞬才知宫墙深似海
+And I discovered that my castles stand
+恍然发现我的城池
+Upon pillars of salt, pillars of sand
+基底散如盐沙乱似尘埃
+I hear Jerusalem bells a-ringing
+听那耶路撒冷钟声传来
+Roman Cavalry choirs are singing
+罗马骑兵歌声震彻山海
+Be my mirror my sword and shield
+担当我的明镜，利剑和盾牌
+My missionaries in a foreign field
+我的传教士屹立边疆之外
+For some reason I can not explain
+只因一些缘由我无法释怀
+Once you go there was never, never an honest word
+一旦你离开这里便不再,不再有逆耳忠言存在
+That was when I ruled the world
+而这便是我统治的时代
+It was the wicked and wild wind
+凛冽邪风呼啸袭来
+Blew down the doors to let me in.
+吹散重门使我深陷阴霾
+Shattered windows and the sound of drums
+断壁残垣礼崩乐坏
+People could not believe what I'd become
+世人不敢相信我已当年不再
+Revolutionaries Wait
+起义大军翘首期待
+For my head on a silver plate
+有朝一日我站上断头台
+Just a puppet on a lonely string
+恰如傀儡随吊线寂寞摇摆
+Oh who would ever want to be king?
+悲哉，谁又曾渴望万人膜拜?
+I hear Jerusalem bells a-ringing
+听那耶路撒冷钟声传来
+Roman Cavalry choirs are singing
+罗马骑兵歌声震彻山海
+Be my mirror my sword and shield
+担当我的明镜，利剑和盾牌
+My missionaries in a foreign field
+我的传教士屹立边疆之外
+For some reason I can not explain
+只因一些缘由我无法释怀
+I know Saint Peter won't call my name
+我亦知天堂之门不会为我敞开
+Never an honest word
+不再有逆耳忠言存在
+But that was when I ruled the world
+而这便是我统治的时代
+(Ohhhhh Ohhh Ohhh)
+(哦哦哦)
+Hear Jerusalem bells a-ringing
+听那耶路撒冷钟声传来
+Roman Cavalry choirs are singing
+罗马骑兵歌声震彻山海
+Be my mirror my sword and shield
+担当我的明镜，利剑和盾牌
+My missionaries in a foreign field
+我的传教士屹立边疆之外
+For some reason I can not explain
+只因一些缘由我无法释怀
+I know Saint Peter won't call my name
+我亦知天堂之门不会为我敞开
+Never an honest word
+不再有逆耳忠言存在
+But that was when I ruled the world
+而这便是我统治的时代
+</textarea>
+-->
+<!--
+	作者：1020170158@qq.com
+	时间：2016-07-24
+	描述：评论区
+-->
+
+ 
+<div id="box">
+    <ul id="fill_in">
+        <form method="post" action="what.php">
+        	<div class="comment-title"><h3>歌友评论</h3></div>
+            <li>标题：<input id="text" type="text" class="text" name="text" placeholder="请输入标题.."/></li>
+            <li>内容：<textarea name="text" placeholder="来说两句吧.." name="text"></textarea></li>
+            <li><input type="submit" value="提交" class="btn" /></li>
+        </form>
+    	<div id="message_text">
+        <h2>评论</h2>
+        <li>
+        	<div class="tou"><img src="img/IOS/user-male-circle-vector.png" class="touxiang"></div>
+        	<div class="name">
+        		 <a href="#">Dick</a>
+        		 <div id="a"></div>
+        	</div>
+        	<div class="words">Good good study,day day up!</div>
+        </li>
+        </div>
+    </ul>  
+</div>
+
+
+	<script language="javascript">
+var c=1;
+function shijian()
+{
+ date=new Date();
+ var xiaoshi=date.getHours();
+ var fen=date.getMinutes();
+ var miao=date.getSeconds();
+ if(fen<=9)
+ fen="0"+fen;
+ if(miao<=9)
+ miao="0"+miao;
+ xianshi="<font class='b'>"+xiaoshi+":"+fen+":"+miao+"</font>";
+ a.innerHTML=xianshi;
+ if(c==1)
+ {
+  setTimeout("shijian()",1000);
+ }
+}
+shijian();
+</script>
+
+    <br/></br>
+	<footer>
+		<div>Copyright ©2016 <a href="http://english.scuec.edu.cn/">SCUEC</a> All Rights Reserved.</div>	
+	</footer>
+<!--
+	作者：1020170158@qq.com
+	时间：2016-07-28
+	描述：js	区
+-->
+  	<script src="js/player/jquery-1.7.2.min.js"></script>
+	<script src="js/player/jquery-ui-1.8.17.custom.min.js"></script>
+	<script src="js/player/script.js"></script>
+	<script type="text/javascript">
+    	$(function(){
+    		$("#showLogin").toggle(
+    			function(){
+    				$("#flesh").css('display','block');
+    				$("#shadow").css('display','block');
+    			},
+    			function(){
+    				$("#flesh").css('display','none');
+    				$("#shadow").css('display','none');
+    			}
+    		);
+    		$("#shadow").click(
+    		function(){
+    				$("#flesh").css('display','none');
+    				$("#shadow").css('display','none');
+    		}
+    		);
+    	})
+    	</script>
+    	
+    	
+    	<script type="text/javascript">
+	$(function(){
+		// Settings
+		var repeat = localStorage.repeat || 0,
+			shuffle = localStorage.shuffle || 'false',
+			continous = true,
+			autoplay = false,
+			playlist = [
+{
+title: 'Bojack Horseman',
+artist: 'Patrick Carney',
+album: 'BoJack Horseman Soundtrack (马男波杰克 原声)',
+cover: 'http://img.mp.itc.cn/upload/20160324/4b453b10a65c4ae9a809f0e36dcc12d0.jpg',
+mp3: 'js/player/Patrick Carney - BoJack Horseman.mp3'
+},
+{
+title: 'Vivi la vida',
+artist: 'Coldplay',
+album: 'LeftRightLeftRightLeft',
+cover:'http://ugc.qpic.cn/baikepic2/0/ori-20131213120030-903227965.jpg/800',
+mp3: 'js/player/Coldplay - Viva la Vida.mp3'
+},
+{
+title: 'Yellow',
+artist: 'Coldplay',
+album: 'Yellow',
+cover: 'http://deluxegems.net/evideos2/29082014/63494a.jpg',
+mp3: 'js/player/Coldplay - Yellow.mp3'
+},
+{
+title: 'Back In The 90s',
+artist: 'Grouplove',
+album: 'BoJack Horseman Soundtrack (马男波杰克 原声)',
+cover: 'http://cn.toluna.com/dpolls_images/2016/01/24/254431e2-3a10-4ed6-89d2-23f0fc28e36a.jpg',
+mp3: 'js/player/Grouplove - Back In The 90s.mp3'
+},];
+
+	// Load playlist
+	for (var i=0; i<playlist.length; i++){
+		var item = playlist[i];
+		$('#playlist').append('<li>'+item.artist+' - '+item.title+'</li>');
+	}
+
+	var time = new Date(),
+		currentTrack = shuffle === 'true' ? time.getTime() % playlist.length : 0,
+		trigger = false,
+		audio, timeout, isPlaying, playCounts;
+
+	var play = function(){
+		audio.play();
+		$('.playback').addClass('playing');
+		timeout = setInterval(updateProgress, 500);
+		isPlaying = true;
+	}
+
+	var pause = function(){
+		audio.pause();
+		$('.playback').removeClass('playing');
+		clearInterval(updateProgress);
+		isPlaying = false;
+	}
+
+	// Update progress
+	var setProgress = function(value){
+		var currentSec = parseInt(value%60) < 10 ? '0' + parseInt(value%60) : parseInt(value%60),
+			ratio = value / audio.duration * 100;
+
+		$('.timer').html(parseInt(value/60)+':'+currentSec);
+		$('.progress .pace').css('width', ratio + '%');
+		$('.progress .slider a').css('left', ratio + '%');
+	}
+
+	var updateProgress = function(){
+		setProgress(audio.currentTime);
+	}
+
+	// Progress slider
+	$('.progress .slider').slider({step: 0.1, slide: function(event, ui){
+		$(this).addClass('enable');
+		setProgress(audio.duration * ui.value / 100);
+		clearInterval(timeout);
+	}, stop: function(event, ui){
+		audio.currentTime = audio.duration * ui.value / 100;
+		$(this).removeClass('enable');
+		timeout = setInterval(updateProgress, 500);
+	}});
+
+	// Volume slider
+	var setVolume = function(value){
+		audio.volume = localStorage.volume = value;
+		$('.volume .pace').css('width', value * 100 + '%');
+		$('.volume .slider a').css('left', value * 100 + '%');
+	}
+
+	var volume = localStorage.volume || 0.5;
+	$('.volume .slider').slider({max: 1, min: 0, step: 0.01, value: volume, slide: function(event, ui){
+		setVolume(ui.value);
+		$(this).addClass('enable');
+		$('.mute').removeClass('enable');
+	}, stop: function(){
+		$(this).removeClass('enable');
+	}}).children('.pace').css('width', volume * 100 + '%');
+
+	$('.mute').click(function(){
+		if ($(this).hasClass('enable')){
+			setVolume($(this).data('volume'));
+			$(this).removeClass('enable');
+		} else {
+			$(this).data('volume', audio.volume).addClass('enable');
+			setVolume(0);
+		}
+	});
+
+	// Switch track
+	var switchTrack = function(i){
+		if (i < 0){
+			track = currentTrack = playlist.length - 1;
+		} else if (i >= playlist.length){
+			track = currentTrack = 0;
+		} else {
+			track = i;
+		}
+
+		$('audio').remove();
+		loadMusic(track);
+		if (isPlaying == true) play();
+	}
+
+	// Shuffle
+	var shufflePlay = function(){
+		var time = new Date(),
+			lastTrack = currentTrack;
+		currentTrack = time.getTime() % playlist.length;
+		if (lastTrack == currentTrack) ++currentTrack;
+		switchTrack(currentTrack);
+	}
+
+	// Fire when track ended
+	var ended = function(){
+		pause();
+		audio.currentTime = 0;
+		playCounts++;
+		if (continous == true) isPlaying = true;
+		if (repeat == 1){
+			play();
+		} else {
+			if (shuffle === 'true'){
+				shufflePlay();
+			} else {
+				if (repeat == 2){
+					switchTrack(++currentTrack);
+				} else {
+					if (currentTrack < playlist.length) switchTrack(++currentTrack);
+				}
+			}
+		}
+	}
+
+	var beforeLoad = function(){
+		var endVal = this.seekable && this.seekable.length ? this.seekable.end(0) : 0;
+		$('.progress .loaded').css('width', (100 / (this.duration || 1) * endVal) +'%');
+	}
+
+	// Fire when track loaded completely
+	var afterLoad = function(){
+		if (autoplay == true) play();
+	}
+
+	// Load track
+	var loadMusic = function(i){
+		var item = playlist[i],
+			newaudio = $('<audio>').html('<source src="'+item.mp3+'"><source src="'+item.ogg+'">').appendTo('#player');
+		
+		$('.cover').html('<img src="'+item.cover+'" alt="'+item.album+'">');
+		$('.tag').html('<strong>'+item.title+'</strong><span class="artist">'+item.artist+'</span><span class="album">'+item.album+'</span>');
+		$('#playlist li').removeClass('playing').eq(i).addClass('playing');
+		audio = newaudio[0];
+		audio.volume = $('.mute').hasClass('enable') ? 0 : volume;
+		audio.addEventListener('progress', beforeLoad, false);
+		audio.addEventListener('durationchange', beforeLoad, false);
+		audio.addEventListener('canplay', afterLoad, false);
+		audio.addEventListener('ended', ended, false);
+	}
+
+	loadMusic(currentTrack);
+	$('.playback').on('click', function(){
+		if ($(this).hasClass('playing')){
+			pause();
+		} else {
+			play();
+		}
+	});
+	$('.rewind').on('click', function(){
+		if (shuffle === 'true'){
+			shufflePlay();
+		} else {
+			switchTrack(--currentTrack);
+		}
+	});
+	$('.fastforward').on('click', function(){
+		if (shuffle === 'true'){
+			shufflePlay();
+		} else {
+			switchTrack(++currentTrack);
+		}
+	});
+	$('#playlist li').each(function(i){
+		var _i = i;
+		$(this).on('click', function(){
+			switchTrack(_i);
+		});
+	});
+
+	if (shuffle === 'true') $('.shuffle').addClass('enable');
+	if (repeat == 1){
+		$('.repeat').addClass('once');
+	} else if (repeat == 2){
+		$('.repeat').addClass('all');
+	}
+
+	$('.repeat').on('click', function(){
+		if ($(this).hasClass('once')){
+			repeat = localStorage.repeat = 2;
+			$(this).removeClass('once').addClass('all');
+		} else if ($(this).hasClass('all')){
+			repeat = localStorage.repeat = 0;
+			$(this).removeClass('all');
+		} else {
+			repeat = localStorage.repeat = 1;
+			$(this).addClass('once');
+		}
+	});
+
+	$('.shuffle').on('click', function(){
+		if ($(this).hasClass('enable')){
+			shuffle = localStorage.shuffle = 'false';
+			$(this).removeClass('enable');
+		} else {
+			shuffle = localStorage.shuffle = 'true';
+			$(this).addClass('enable');
+		}
+	});
+})(jQuery);
+  </script>
+  
+    
+  <!--收藏弹窗-->
+ <div id="fd" style="display:none;filter:alpha(opacity=100);opacity:1;">
+
+
+   <a href="#" class="od" onclick = "closeed('fd');return false;"><img style=" float: right; height: 25px;width: 25px; margin-right:0px ;" src="img/IOS-style/close_536px_1199468_easyicon.net.png"/></a>
+   
+	<table id="table2" border="0" cellpadding="4" cellspacing="0" align="center" width="100%">
+		<thead>
+			<th align="left">歌曲名</th>
+			<th align="center" width="40">收藏</th>
+			<th align="center" width="40">下载</th>
+			<th align="center" width="40">删除</th>
+		</thead>
+		
+		<tr>
+			<td align="left">Accounting</td>
+			<td align="center"><a href="#" onclick="return false;"><img style="height: 30px;" src="img/IOS-style/like-vector.png" border="0"></a></td>
+			<td align="center"><a href="#" onclick="return false;"><img style="height: 30px;" src="img/IOS-style/download-cloud-vector.png" border="0"></a></td>
+			<td align="center"><a href="#" onclick="return false;"><img style="height: 25px;width: 35px;" src="img/IOS-style/trash-vector.png" border="0"></a></td>
+		</tr>
+		<tr>
+			<td align="left">Animation</td>
+			<td align="center"><a href="#" onclick="return false;"><img style="height: 30px;" src="img/IOS-style/like-vector.png" border="0"></a></td>
+			<td align="center"><a href="#" onclick="return false;"><img style="height: 30px;" src="img/IOS-style/download-cloud-vector.png" border="0"></a></td>
+			<td align="center"><a href="#" onclick="return false;"><img style="height: 25px;width: 35px;" src="img/IOS-style/trash-vector.png" border="0"></a></td>
+		</tr>
+		<tr>
+			<td align="left">Anthropology</td>
+			<td align="center"><a href="#" onclick="return false;"><img style="height: 30px;" src="img/IOS-style/like-vector.png" border="0"></a></td>
+			<td align="center"><a href="#" onclick="return false;"><img style="height: 30px;" src="img/IOS-style/download-cloud-vector.png" border="0"></a></td>
+			<td align="center"><a href="#" onclick="return false;"><img style="height: 25px;width: 35px;" src="img/IOS-style/trash-vector.png" border="0"></a></td>
+		</tr>
+		<tr>
+			<td align="left">Archaeology</td>
+			<td align="center"><a href="#" onclick="return false;"><img style="height: 30px;" src="img/IOS-style/like-vector.png" border="0"></a></td>
+			<td align="center"><a href="#" onclick="return false;"><img style="height: 30px;" src="img/IOS-style/download-cloud-vector.png" border="0"></a></td>
+			<td align="center"><a href="#" onclick="return false;"><img style="height: 25px;width: 35px;" src="img/IOS-style/trash-vector.png" border="0"></a></td>
+		</tr>
+		<tr>
+			<td align="left">Architecture</td>
+			<td align="center"><a href="#" onclick="return false;"><img style="height: 30px;" src="img/IOS-style/like-vector.png" border="0"></a></td>
+			<td align="center"><a href="#" onclick="return false;"><img style="height: 30px;" src="img/IOS-style/download-cloud-vector.png" border="0"></a></td>
+			<td align="center"><a href="#" onclick="return false;"><img style="height: 25px;width: 35px;" src="img/IOS-style/trash-vector.png" border="0"></a></td>
+		</tr>
+
+		<tr>
+			<td align="left">Art</td>
+			<td align="center"><a href="#" onclick="return false;"><img style="height: 30px;" src="img/IOS-style/like-vector.png" border="0"></a></td>
+			<td align="center"><a href="#" onclick="return false;"><img style="height: 30px;" src="img/IOS-style/download-cloud-vector.png" border="0"></a></td>
+			<td align="center"><a href="#" onclick="return false;"><img style="height: 25px;width: 35px;" src="img/IOS-style/trash-vector.png" border="0"></a></td>
+		</tr>
+</div>
+
+<script type="text/javascript" src="js/Windows/buttons.js"></script>
+  
+  <!--我的收藏弹窗部分结束-->
+
+</body>
+</html>
